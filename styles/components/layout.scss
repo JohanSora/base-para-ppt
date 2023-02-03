@@ -1,0 +1,343 @@
+.containerGlobal {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryColorWhite;
+  .globalContent {
+    display: flex;
+    background-color: $primaryColorWhite;
+    width: 85%;
+    height: 100%;
+    .containerLayout {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 20%;
+      background-color: $primaryColorWhite;
+      box-shadow: 0px 0px 10px 1px $primaryColorSemiWhite;
+      height: 91vh;
+      position: sticky;
+      top: 70px;
+      z-index: 3;
+
+      .containerRedirections {
+        width: 100%;
+        height: 82%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 20px;
+        .containerItemLayout {
+          .itemLayout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            cursor: pointer;
+            p {
+              text-shadow: 0px 0px 1px $primaryColorBlack;
+              font-size: 14px;
+              max-width: 85px;
+              min-width: 85px;
+            }
+
+            &:hover {
+              transition: all;
+              transition-duration: 0.2s;
+              background-color: $primaryColorRedTrans;
+              border-radius: 20px;
+              padding: 5px 0px;
+              color: $primaryColorWhite;
+              font-weight: bold;
+              p {
+                text-shadow: none;
+              }
+
+              svg[stroke="#2c2c2c"] {
+                stroke: $primaryColorWhite;
+              }
+              svg[fill="#2c2c2c"] {
+                fill: $primaryColorWhite;
+              }
+            }
+          }
+
+          .itemLayoutSelect {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            cursor: pointer;
+            p {
+              text-shadow: 0px 0px 1px $primaryColorBlack;
+              font-size: 14px;
+              max-width: 85px;
+              min-width: 85px;
+            }
+            background-color: $primaryColorRedTrans;
+            border-radius: 20px;
+            padding: 5px 0px;
+            color: $primaryColorWhite;
+            font-weight: bold;
+            p {
+              text-shadow: none;
+            }
+
+            svg[stroke="#2c2c2c"] {
+              stroke: $primaryColorWhite;
+            }
+            svg[fill="#2c2c2c"] {
+              fill: $primaryColorWhite;
+            }
+          }
+
+          &:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+          }
+          &:nth-child(3)::after {
+            content: "";
+            width: 100%;
+            max-width: 210px;
+            height: 1.3px;
+
+            background-color: $primaryColorBlack;
+          }
+        }
+      }
+      .adobeMarket {
+        background-color: $blueColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $primaryColorWhite;
+        height: 40px;
+      }
+    }
+  }
+
+  .navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    grid-template-rows: 1;
+    width: 100%;
+    height: 76px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0px 0px 30% 30%;
+    border-bottom: 1px solid #fa0f1738;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    animation-name: parpadeo;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    background-color: $primaryColorRed;
+
+    .digipoints {
+      button {
+        position: relative;
+        padding: 0.8em;
+        outline: none;
+        border: 1px solid $primaryColorRed;
+        background: $primaryColorWhite;
+        color: $primaryColorRed;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 15px;
+        overflow: hidden;
+        transition: 0.2s;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      button:hover {
+        box-shadow: 0 0 5px $primaryColorRed, 0 0 5px $primaryColorRedTrans,
+          0 0 10px $primaryColorRed;
+        transition-delay: 0.6s;
+      }
+
+      button span {
+        position: absolute;
+      }
+
+      button span:nth-child(1) {
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $primaryColorRed);
+      }
+
+      button:hover span:nth-child(1) {
+        left: 100%;
+        transition: 0.7s;
+      }
+
+      button span:nth-child(3) {
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, $primaryColorRedTrans);
+      }
+
+      button:hover span:nth-child(3) {
+        right: 100%;
+        transition: 0.7s;
+        transition-delay: 0.35s;
+      }
+
+      button span:nth-child(2) {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, $primaryColorRed);
+      }
+
+      button:hover span:nth-child(2) {
+        top: 100%;
+        transition: 0.7s;
+        transition-delay: 0.17s;
+      }
+
+      button span:nth-child(4) {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, $primaryColorRedTrans);
+      }
+
+      button:hover span:nth-child(4) {
+        bottom: 100%;
+        transition: 0.7s;
+        transition-delay: 0.52s;
+      }
+
+      button:active {
+        background: $primaryColorRed;
+        background: linear-gradient(
+          to top right,
+          $primaryColorRed,
+          $primaryColorRedTrans
+        );
+        color: $primaryColorWhite;
+        box-shadow: 0 0 8px $primaryColorRed, 0 0 8px $primaryColorRedTrans,
+          0 0 8px $primaryColorRedTrans;
+        transition: 0.1s;
+      }
+
+      button:active
+        span:nth-child(1)
+        span:nth-child(2)
+        span:nth-child(2)
+        span:nth-child(2) {
+        transition: none;
+        transition-delay: none;
+      }
+    }
+
+    .userDrop {
+      display: flex;
+      align-items: center;
+      height: 80%;
+      border-radius: 100px;
+      padding: 10px;
+      justify-content: space-between;
+
+      .user {
+        width: 80%;
+        .userPreMenu {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+          background-color: $primaryColorWhite;
+          border-radius: 50px;
+          padding: 0px 5px;
+
+          sgv {
+            width: 40px;
+          }
+          p {
+            width: 150px;
+          }
+        }
+      }
+
+      .buttonLayoutDropdown {
+        cursor: pointer;
+        color: $primaryColorRed;
+      }
+
+      .shoopingMarket {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+        p {
+          position: absolute;
+          text-align: center;
+          min-width: 20px !important;
+          background-color: $primaryColorWhite;
+          border: 1px solid $primaryColorRed;
+          color: $primaryColorBlack;
+          height: 20px;
+          padding: 0px 5px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        width: 60px;
+        cursor: pointer;
+      }
+    }
+
+    .logoAdobeLayout {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      p {
+        font-size: 22px;
+        font-weight: bold;
+        color: $primaryColorWhite;
+      }
+    }
+  }
+}
+
+.pageDontAccess {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  .dontAccess {
+    font-weight: bold;
+    font-size: 30px;
+    color: $primaryColorRed;
+  }
+}

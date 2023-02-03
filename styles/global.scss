@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./pages/login.scss";
+@import "./pages/dashboard.scss";
+@import "./pages/digipoints.scss";
+
+@import "./pages/market.scss";
+@import "./components/cardMarket.scss";
+@import "./components/trackingProduct.scss";
+@import "./components/progress.scss";
+
+@import "./components/layout.scss";
+
+@import "./Base/mixins";
+@import "./Base/variables";
+
+@import "./animations/animations.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.report-style-class {
+  height: 80vh;
+}
+
+.containerGlobal {
+  position: relative;
+
+  .bgAPC {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    figure {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+main {
+  max-width: 90%;
+  z-index: 2;
+}

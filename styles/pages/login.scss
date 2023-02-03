@@ -1,0 +1,18 @@
+.mainIndex {
+  background-image: url(../../public/assets/Icons/RicohBG.png);
+  background-repeat: round;
+  background-color: #ffff;
+  max-width: 100%;
+}
+
+.adobeCo {
+  top: 0;
+  left: 0;
+
+  img {
+    max-width: 260px;
+    min-width: 150px;
+    width: 100%;
+    z-index: 10 !important;
+  }
+}
